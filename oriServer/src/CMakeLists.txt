@@ -1,0 +1,8 @@
+#cmake_minimum_required(VERSION 2.8)
+
+include_directories(${PROJECT_SOURCE_DIR}/lib)
+add_executable(server server.cpp)
+add_executable(client client.cpp)
+set(EXECUTABLE_OUTPUT_PATH ${PROJECT_BINARY_DIR}/bin)
+target_link_libraries(server utilShared)
+target_link_libraries(client utilShared)
